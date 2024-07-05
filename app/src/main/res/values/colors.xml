@@ -6,4 +6,10 @@
     <color name="main_blue">#171F32</color>
     <color name="main_orange">#FF601B</color>
 
+    <color name="sub_orange">#ff7e26</color>
+
+    <color name="dark_white">#E2E2E2</color>
+
+
+
 </resources>
