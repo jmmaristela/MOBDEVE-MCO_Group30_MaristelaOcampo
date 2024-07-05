@@ -5,13 +5,13 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/InterVariable" />
+        android:font="@font/inter_font" />
 
     <!-- Italic variant -->
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
-        android:font="@font/InterVariableItalic" />
+        android:font="@font/inter_italic" />
 
 
     <!-- Add more variants as needed -->
