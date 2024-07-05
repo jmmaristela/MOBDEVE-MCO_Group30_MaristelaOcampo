@@ -1,9 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+
 }
 
+
+
+
 android {
+
+
     namespace = "com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco"
     compileSdk = 34
 
@@ -35,13 +41,17 @@ android {
     }
 }
 
-dependencies {
 
+
+dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    implementation("de.hdodenhof:circleimageview:3.1.0") // Add this line
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

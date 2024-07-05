@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Regular variant -->
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/InterVariable" />
+
+    <!-- Italic variant -->
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/InterVariableItalic" />
+
+
+    <!-- Add more variants as needed -->
+
+</font-family>
