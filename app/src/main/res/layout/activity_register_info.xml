@@ -54,7 +54,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/custom_edittext_register"
                 android:backgroundTint="@color/dark_white"
-                android:hint="Address"
+                android:hint="Home Address"
                 android:paddingLeft="20dp"
                 android:textColor="@color/black" />
 
