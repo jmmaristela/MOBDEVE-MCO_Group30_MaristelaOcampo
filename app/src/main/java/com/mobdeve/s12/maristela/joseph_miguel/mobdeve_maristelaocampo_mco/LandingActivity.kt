@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.HomeFragment
+import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.NotificationFragment
 
 class LandingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
