@@ -19,7 +19,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/font_family"
-            android:text="@string/profile_text"
+            android:text="@string/notifications_text"
             android:textColor="@color/white"
             android:textSize="25sp" />
     </FrameLayout>
@@ -29,34 +29,6 @@
         android:layout_height="775dp"
         android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/pfp"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/font_family"
-            android:gravity="center"
-            android:text="@string/username"
-            android:textColor="@color/white" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:text="@string/recent_activity"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
 
     </LinearLayout>
 
