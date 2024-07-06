@@ -8,19 +8,12 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="191dp"
-        android:layout_marginTop="-100dp"
-        android:src="@drawable/main_logo" />
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        app:cardBackgroundColor="@color/dark_white"
+        app:cardBackgroundColor="@color/sub_orange"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
@@ -33,34 +26,49 @@
             android:padding="24dp">
 
             <TextView
-                android:id="@+id/loginText"
+                android:id="@+id/registerText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Account"
                 android:textAlignment="center"
-                android:textColor="@color/main_blue"
-                android:textSize="36sp"
-                android:fontFamily="sans-serif-black"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext_register"
+                android:backgroundTint="@color/dark_white"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="15dp"
+                android:hint="Email Address"
+                android:padding="8dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext_register"
+                android:backgroundTint="@color/dark_white"
                 android:drawableLeft="@drawable/baseline_person_24"
                 android:drawablePadding="15dp"
                 android:hint="Username"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"/>
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext_register"
+                android:backgroundTint="@color/dark_white"
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="15dp"
                 android:hint="Password"
@@ -68,25 +76,39 @@
                 android:padding="8dp"
                 android:textColor="@color/black" />
 
+            <EditText
+                android:id="@+id/passwordConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext_register"
+                android:backgroundTint="@color/dark_white"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="15dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/createBtn"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/main_orange"
-                android:text="Continue"
+                android:backgroundTint="@color/main_blue"
+                android:text="Create account"
                 android:textSize="18sp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 app:cornerRadius="20dp" />
 
             <TextView
-                android:id="@+id/signUpLink"
+                android:id="@+id/loginLink"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Don't have an account? Sign Up"
+                android:layout_marginTop="10dp"
+                android:text="Already have an account? Login here"
                 android:textAlignment="center"
-                android:textColor="@color/main_blue"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="italic"
                 android:clickable="true"
