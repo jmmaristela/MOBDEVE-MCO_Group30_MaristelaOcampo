@@ -32,8 +32,8 @@
                 android:text="Personal Info"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="36sp"
-                android:fontFamily="sans-serif-black"
+                android:textSize="40sp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:textStyle="bold" />
 
             <EditText

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Handler
 import android.os.Looper
+import android.widget.Toast
 
 class LandingActivity : AppCompatActivity() {
     private lateinit var mainController: MainController
@@ -11,6 +12,8 @@ class LandingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_landing)
+
+        Toast.makeText(this, "Welcome to the Fitness Pro App", Toast.LENGTH_SHORT).show()
 
         mainController = MainController(this)
 
