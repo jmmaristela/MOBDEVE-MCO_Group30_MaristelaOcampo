@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/main_blue"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".NotificationFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -24,14 +25,13 @@
             android:textSize="25sp" />
     </FrameLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notification_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="862dp"
-        android:orientation="vertical">
-
-
-    </LinearLayout>
-
-
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/item_notification" />
 
 </LinearLayout>
