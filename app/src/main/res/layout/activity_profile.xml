@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/main_blue"
+    tools:context=".LandingActivity"
     android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/profile_menu"
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:background="@color/main_orange">
@@ -26,7 +28,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="775dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -59,21 +62,6 @@
             android:textSize="18sp" />
 
     </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessLeaf">
-    </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/main_blue"
-        app:itemIconTint="@color/main_orange"
-        app:itemTextAppearanceInactive="@style/BottomNavigationTextInactive"
-        app:menu="@menu/bottom_nav_menu" />
 
 
 </LinearLayout>
