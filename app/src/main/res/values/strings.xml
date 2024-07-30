@@ -15,8 +15,13 @@
     <string name="FitnessPro_text">Fitness Pro</string>
     <string name="followers">Followers</string>
     <string name="following">Following</string>
-
-
+    <string name="start_activity_text">Start Activity</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="food_tracker">Food Tracker</string>
+    <string name="weight_tracker">Weight Tracker</string>
+    <string name="community_feed">Community Feed</string>
+    <string name="chat">Chat</string>
+    <string name="discover">Discover</string>
 
 
 </resources>

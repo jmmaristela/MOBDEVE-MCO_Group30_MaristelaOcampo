@@ -9,21 +9,17 @@
     tools:context=".ProfileActivity">
 
     <FrameLayout
-        android:id="@+id/profile_menu"
         android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:background="@color/main_orange">
+        android:layout_height="80dp"
+        android:background="@color/main_blue">
 
-        <TextView
-            android:id="@+id/textView"
+        <ImageView
+            android:id="@+id/logoImageView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/font_family"
-            android:text="@string/profile_text"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:layout_height="101dp"
+            android:layout_gravity="center"
+            android:layout_margin="0in"
+            android:src="@drawable/main_logo" /> <!-- Replace with your logo drawable -->
     </FrameLayout>
 
     <LinearLayout

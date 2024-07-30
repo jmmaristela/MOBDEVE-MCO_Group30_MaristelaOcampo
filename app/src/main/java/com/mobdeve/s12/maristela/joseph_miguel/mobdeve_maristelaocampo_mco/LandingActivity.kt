@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.HomeFragment
+import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.NotificationFragment
+import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.StartActivityFragment
 
 class LandingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +21,10 @@ class LandingActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.home_menu -> {
                     setCurrentFragment(HomeFragment())
+                    true
+                }
+                R.id.start_menu -> {
+                    setCurrentFragment(StartActivityFragment())
                     true
                 }
                 R.id.notif_menu -> {
@@ -44,4 +50,5 @@ class LandingActivity : AppCompatActivity() {
             replace(R.id.fragment_container, fragment)
             commit()
         }
+
 }
