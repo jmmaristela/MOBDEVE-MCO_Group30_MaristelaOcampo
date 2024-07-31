@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_blue"
     android:orientation="vertical"
-    tools:context=".ProfileActivity">
+    tools:context=".fragments.ProfileFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -20,6 +20,15 @@
             android:layout_gravity="center"
             android:layout_margin="0in"
             android:src="@drawable/main_logo" /> <!-- Replace with your logo drawable -->
+
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_settings" /> <!-- Replace with your settings icon drawable -->
     </FrameLayout>
 
     <LinearLayout
