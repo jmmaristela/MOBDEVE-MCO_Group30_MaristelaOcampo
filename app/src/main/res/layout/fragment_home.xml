@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/main_logo" /> <!-- Replace with your logo drawable -->
+            android:src="@drawable/main_logo" />
     </FrameLayout>
 
     <!-- Tab buttons -->
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/icon_community_feed"
-        android:contentDescription="@string/community_feed" />
+            android:contentDescription="@string/community_feed" />
 
         <ImageButton
             android:id="@+id/tab_chat"
@@ -43,7 +43,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/icon_chat"
-        android:contentDescription="@string/chat" />
+            android:contentDescription="@string/chat" />
 
         <ImageButton
             android:id="@+id/tab_discover"
@@ -52,7 +52,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/icon_discover"
-        android:contentDescription="@string/discover" />
+            android:contentDescription="@string/discover" />
     </LinearLayout>
 
     <!-- Container for tab content -->

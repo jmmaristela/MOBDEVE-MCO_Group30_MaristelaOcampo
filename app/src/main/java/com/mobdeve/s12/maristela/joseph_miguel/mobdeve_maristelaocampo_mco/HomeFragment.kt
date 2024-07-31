@@ -1,14 +1,15 @@
-package com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments
+package com.mobdeve.s12.maristela.joseph_miguel.mobdeve.maristelaocampo.mco.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.R
+import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.CommunityFeedFragment
+import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.DiscoverFragment
 
 class HomeFragment : Fragment() {
 
@@ -21,7 +22,6 @@ class HomeFragment : Fragment() {
         val communityFeedButton: ImageButton = view.findViewById(R.id.tab_community_feed)
         val chatButton: ImageButton = view.findViewById(R.id.tab_chat)
         val discoverButton: ImageButton = view.findViewById(R.id.tab_discover)
-
 
         communityFeedButton.setOnClickListener {
             replaceFragment(CommunityFeedFragment())
