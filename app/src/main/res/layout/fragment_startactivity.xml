@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/main_logo" /> <!-- Replace with your logo drawable -->
+            android:src="@drawable/main_logo"
+            android:contentDescription="@string/logo_description"/>
     </FrameLayout>
 
     <LinearLayout
@@ -32,6 +33,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="16dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/icon_start_workout"
             android:contentDescription="@string/start_workout" />
@@ -41,6 +45,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="16dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/icon_food_tracker"
             android:contentDescription="@string/food_tracker" />
@@ -50,6 +57,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="16dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/icon_weight_tracker"
             android:contentDescription="@string/weight_tracker" />
