@@ -29,6 +29,11 @@
     <string name="help">Help</string>
     <string name="notification_settings">Notification Settings</string>
     <string name="unit_settings">Unit Settings</string>
-
+    <string name="type_of_workout">Type of Workout:</string>
+    <string name="timer">Timer:</string>
+    <string name="estimated_calories_burned">Estimated Calories Burned:</string>
+    <string name="pedometer_status">Pedometer Status:</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
 
 </resources>
