@@ -15,15 +15,37 @@
         android:theme="@style/Theme.MOBDEVE_MaristelaOcampoMCO"
         tools:targetApi="31">
 
+        <!-- Start launch -->
+
+        <!-- SplashActivity -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+        <!-- UserOption declaration -->
+        <activity android:name=".UserOptionActivity" />
+
+        <!-- LoginActivity declaration -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <!-- RegisterActivity declaration -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- MAIN -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MOBDEVE_MaristelaOcampoMCO" />
+
+    </application>
 </manifest>

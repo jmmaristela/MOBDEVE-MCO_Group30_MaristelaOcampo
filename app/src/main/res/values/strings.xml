@@ -35,5 +35,23 @@
     <string name="pedometer_status">Pedometer Status:</string>
     <string name="start">Start</string>
     <string name="stop">Stop</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username_title">Username</string>
+    <string name="password_title">Password</string>
+    <string name="continue_title">Continue</string>
+    <string name="question_login">Do not have an account? Sign Up</string>
+
+    <string name="account">Account</string>
+    <string name="email_address">Email Address</string>
+    <string name="confirm_password_title">Confirm Password</string>
+    <string name="create_account">Create account</string>
+    <string name="question_register">Already have an account? Login here</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="height">Approximate Height</string>
+    <string name="weight">Approximate Weight</string>
+    <string name="gender">Gender</string>
 
 </resources>
