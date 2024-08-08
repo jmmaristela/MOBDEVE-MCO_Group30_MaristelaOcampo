@@ -11,7 +11,7 @@ import com.mobdeve.s12.maristela.joseph_miguel.mobdeve.maristelaocampo.mco.fragm
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.NotificationFragment
 
 
-class LandingActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

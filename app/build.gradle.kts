@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 
 }
 
@@ -55,9 +56,12 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
-    implementation(libs.androidx.recyclerview) // Add this line
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.firebase.database) // Add this line
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
