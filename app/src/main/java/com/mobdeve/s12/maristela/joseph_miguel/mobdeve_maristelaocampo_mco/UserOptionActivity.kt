@@ -18,7 +18,7 @@ class UserOptionActivity: AppCompatActivity() {
         }
 
         registerButton.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, PersonalActivity::class.java))
         }
 
     }

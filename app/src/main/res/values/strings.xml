@@ -51,8 +51,8 @@
     <string name="personal_info">Personal Info</string>
     <string name="full_name">Full Name</string>
     <string name="address">Address</string>
-    <string name="height">Approximate Height</string>
-    <string name="weight">Approximate Weight</string>
+    <string name="height">Approximate Height (in cm)</string>
+    <string name="weight">Approximate Weight (in kg)</string>
     <string name="gender">Gender</string>
 
 </resources>
