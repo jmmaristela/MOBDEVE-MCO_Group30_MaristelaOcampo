@@ -61,7 +61,8 @@ dependencies {
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.androidx.recyclerview)
-    implementation(libs.firebase.database) // Add this line
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.auth) // Add this line
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

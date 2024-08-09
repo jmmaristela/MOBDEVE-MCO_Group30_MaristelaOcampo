@@ -43,6 +43,7 @@
     <string name="question_login">Do not have an account? Sign Up</string>
 
     <string name="account">Account</string>
+    <string name="register">Register</string>
     <string name="email_address">Email Address</string>
     <string name="confirm_password_title">Confirm Password</string>
     <string name="create_account">Create account</string>
