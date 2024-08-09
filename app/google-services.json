@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "223241283248",
+    "project_id": "mobdeve-maristelaocampo-mco",
+    "storage_bucket": "mobdeve-maristelaocampo-mco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223241283248:android:38de710420ccf37a7ebd75",
+        "android_client_info": {
+          "package_name": "com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY-5JvSLvjV5TTIg1vvieeT6t91_byGUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
