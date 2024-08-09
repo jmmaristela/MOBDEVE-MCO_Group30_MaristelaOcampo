@@ -25,7 +25,12 @@ class LoginActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             if (binding.username.text.toString() == "user" && binding.password.text.toString() == "1234") {
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                // Navigate to the home screen or another activity
+
+                // Navigate to MainActivity after successful login
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+
             } else {
                 Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
             }
