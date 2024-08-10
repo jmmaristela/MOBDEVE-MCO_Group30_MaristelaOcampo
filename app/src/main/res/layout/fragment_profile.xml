@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/font_family"
                     android:gravity="center"
-                    android:text="100"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/font_family"
                     android:gravity="center"
-                    android:text="200"
+                    android:text="0"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 

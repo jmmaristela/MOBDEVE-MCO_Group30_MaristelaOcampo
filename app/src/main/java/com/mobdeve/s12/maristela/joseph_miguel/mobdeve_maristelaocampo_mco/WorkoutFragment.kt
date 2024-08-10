@@ -1,6 +1,8 @@
 package com.mobdeve.s12.maristela.joseph_miguel.mobdeve.maristelaocampo.mco.fragments
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemClock
 import android.provider.Settings.Global.getString
 import android.view.LayoutInflater
@@ -11,9 +13,10 @@ import android.widget.Button
 import android.widget.Chronometer
 import android.widget.Spinner
 import android.widget.TextView
+import kotlin.concurrent.timer
 import androidx.fragment.app.Fragment
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.R
-
+import com.google.firebase.firestore.FirebaseFirestore
 
 class WorkoutFragment : Fragment() {
 
@@ -23,12 +26,18 @@ class WorkoutFragment : Fragment() {
     private lateinit var buttonStartWorkout: Button
     private var isRunning = false
     private var steps = 0
+    private var calories = 0.0
+    private lateinit var firestore: FirebaseFirestore
+    private var workoutType: String = "Running"
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_workout, container, false)
+
+        // Initialize Firestore
+        firestore = FirebaseFirestore.getInstance()
 
         val spinnerWorkoutType: Spinner = view.findViewById(R.id.spinner_workout_type)
         timer = view.findViewById(R.id.text_timer)
@@ -41,6 +50,9 @@ class WorkoutFragment : Fragment() {
         val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, workoutTypes)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerWorkoutType.adapter = adapter
+
+        // Set spinner background color to white
+        spinnerWorkoutType.setBackgroundColor(requireContext().getColor(android.R.color.white))
 
         // Set up button click listener
         buttonStartWorkout.setOnClickListener {
@@ -60,8 +72,14 @@ class WorkoutFragment : Fragment() {
         timer.base = SystemClock.elapsedRealtime()
         timer.start()
 
+        // Set the workout type
+        workoutType = view?.findViewById<Spinner>(R.id.spinner_workout_type)?.selectedItem.toString()
+
         // Start pedometer if possible
         // Initialize pedometer here if required
+
+        // Periodically update calories and steps
+        startTracking()
     }
 
     private fun stopWorkout() {
@@ -72,10 +90,52 @@ class WorkoutFragment : Fragment() {
         // Stop pedometer if possible
         // Finalize pedometer here if required
 
-        // Calculate estimated calories burned (example logic)
+        // Calculate estimated calories burned
+        textEstimatedCalories.text = "$calories kcal"
+        textPedometerStatus.text = "Steps: $steps"
+
+        // Save workout data to Firestore
+        saveWorkoutToFirestore()
+    }
+
+    private fun startTracking() {
+        timer(period = 1000) { // Update every second
+            if (isRunning) {
+                steps += 1
+                calories = steps / 20.0
+
+                // Update UI
+                requireActivity().runOnUiThread {
+                    textEstimatedCalories.text = "${calories.toInt()} kcal"
+                    textPedometerStatus.text = "Steps: $steps"
+                }
+            }
+        }
+    }
+
+    private fun saveWorkoutToFirestore() {
         val elapsedMillis = SystemClock.elapsedRealtime() - timer.base
         val elapsedMinutes = elapsedMillis / 1000 / 60
-        val estimatedCalories = elapsedMinutes * (if (steps > 0) steps else 1) // Simplified calculation
-        textEstimatedCalories.text = "$estimatedCalories kcal"
+
+        // Create a workout data object
+        val workoutData = hashMapOf(
+            "type" to workoutType,
+            "duration" to elapsedMinutes,
+            "calories" to calories.toLong(),
+            "steps" to steps,
+            "timestamp" to System.currentTimeMillis()
+        )
+
+        // Save the workout data to Firestore
+        firestore.collection("workouts")
+            .add(workoutData)
+            .addOnSuccessListener {
+                // Successfully saved workout data
+                // You can show a Toast or update the UI here if needed
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occur
+                e.printStackTrace()
+            }
     }
 }
