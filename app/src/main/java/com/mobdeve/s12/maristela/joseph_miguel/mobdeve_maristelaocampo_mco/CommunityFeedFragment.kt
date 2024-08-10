@@ -32,7 +32,7 @@ class CommunityFeedFragment : Fragment() {
                 postTime = "1 hour ago",
                 postDescription = "Went for a morning run",
                 activityType = "Running",
-                photoUri = R.drawable.main_logo
+                photoUri = R.drawable.morning_run
             ),
             Post(
                 profileImageResId = R.drawable.pfp,

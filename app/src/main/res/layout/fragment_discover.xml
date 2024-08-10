@@ -3,14 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/main_blue">
+    android:background="@color/main_blue"
+    android:gravity="center_horizontal">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discover"
+        android:text="Discover Workouts"
         android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-black"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_discover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/white" />
 </LinearLayout>

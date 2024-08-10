@@ -17,6 +17,11 @@
 
         <!-- Start launch -->
 
+        <meta-data
+            android:name="com.google.android.youtube.API_KEY"
+            android:value="AIzaSyD5-cbpAlCTarcKAWWZz8xq_-AIYk5CfvA"/>
+
+
         <!-- SplashActivity -->
         <activity
             android:name=".SplashActivity"

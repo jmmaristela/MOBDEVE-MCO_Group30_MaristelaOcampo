@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.R
 import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.CommunityFeedFragment
-import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.fragments.DiscoverFragment
 
 class HomeFragment : Fragment() {
 

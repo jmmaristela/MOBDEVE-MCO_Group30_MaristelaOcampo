@@ -7,7 +7,6 @@ plugins {
 
 
 
-
 android {
 
 
@@ -63,7 +62,12 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.firebase.database)
     implementation(libs.firebase.auth)
-    implementation(libs.firebase.firestore.ktx) // Add this line
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.play.services.maps)
+    implementation(libs.places) // Add this line
+
+    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1")
+    
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
