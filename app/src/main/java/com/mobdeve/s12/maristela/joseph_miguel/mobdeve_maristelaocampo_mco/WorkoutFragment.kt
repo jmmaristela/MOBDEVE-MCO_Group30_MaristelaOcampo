@@ -15,8 +15,9 @@ import android.widget.Spinner
 import android.widget.TextView
 import kotlin.concurrent.timer
 import androidx.fragment.app.Fragment
-import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.R
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.mobdeve.s12.maristela.joseph_miguel.mobdeve_maristelaocampo_mco.R
 
 class WorkoutFragment : Fragment() {
 
@@ -28,6 +29,7 @@ class WorkoutFragment : Fragment() {
     private var steps = 0
     private var calories = 0.0
     private lateinit var firestore: FirebaseFirestore
+    private lateinit var auth: FirebaseAuth
     private var workoutType: String = "Running"
 
     override fun onCreateView(
@@ -36,8 +38,9 @@ class WorkoutFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_workout, container, false)
 
-        // Initialize Firestore
+        // Initialize Firestore and FirebaseAuth
         firestore = FirebaseFirestore.getInstance()
+        auth = FirebaseAuth.getInstance()
 
         val spinnerWorkoutType: Spinner = view.findViewById(R.id.spinner_workout_type)
         timer = view.findViewById(R.id.text_timer)
@@ -114,6 +117,7 @@ class WorkoutFragment : Fragment() {
     }
 
     private fun saveWorkoutToFirestore() {
+        val userId = auth.currentUser?.uid ?: return // Get the user ID
         val elapsedMillis = SystemClock.elapsedRealtime() - timer.base
         val elapsedMinutes = elapsedMillis / 1000 / 60
 
@@ -126,8 +130,9 @@ class WorkoutFragment : Fragment() {
             "timestamp" to System.currentTimeMillis()
         )
 
-        // Save the workout data to Firestore
-        firestore.collection("workouts")
+        // Save the workout data to the user's Firestore document
+        firestore.collection("users").document(userId)
+            .collection("recent_activities")
             .add(workoutData)
             .addOnSuccessListener {
                 // Successfully saved workout data
